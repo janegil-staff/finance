@@ -6,9 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "json-server": "json-server --watch db.json --port 3100 -- --delay"
   },
   "dependencies": {
+    "json-server": "^0.17.4",
     "lucide-react": "^0.514.0",
     "next": "15.3.3",
     "react": "^19.0.0",
