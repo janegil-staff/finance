@@ -4,9 +4,9 @@ export default function Button(props) {
   return (
     <button
       {...props}
-      className={`cursor-pointer ${
+      className={`${
         props.variant ? variants[props.variant] : variants["default"]
-      } ${props.size ? sizes[props.size] : sizes["base"]}`}
+      } ${props.size ? sizes[props.size] : sizes["base"]} ${props.className}`}
     ></button>
   );
 }
