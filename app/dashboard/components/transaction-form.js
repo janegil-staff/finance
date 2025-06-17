@@ -29,8 +29,6 @@ export default function TransactionForm() {
   const type = watch("type");
 
   const onSubmit = async (data) => {
-    console.log(data);
-    return;
     setSaving(true);
     setLastError();
     try {
@@ -66,7 +64,7 @@ export default function TransactionForm() {
 
         <div>
           <Label className="mb-1">Category</Label>
-          <Select {...register("category")}>
+          <Select {...register("category")} disabled={type !== "Expense"}>
             <option value="">Select a category</option>
             {categories.map((category) => (
               <option key={category}>{category}</option>
