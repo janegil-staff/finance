@@ -19,7 +19,6 @@ export default function Trend({ type, amount, prevAmount }) {
     () => calcPercentageChange(amount, prevAmount).toFixed(0),
     [amount, prevAmount]
   );
-
   const formattedAmount = useFormatCurrency(amount);
 
   return (
