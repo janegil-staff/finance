@@ -64,7 +64,7 @@ export default function TransactionForm() {
 
         <div>
           <Label className="mb-1">Category</Label>
-          <Select {...register("category")} disabled={type !== "Expense"}>
+          <Select {...register("category")}>
             <option value="">Select a category</option>
             {categories.map((category) => (
               <option key={category}>{category}</option>
